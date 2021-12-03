@@ -320,8 +320,8 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.2f1/Editor/Data/NetStandard/ref/2.1.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.2f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.2f1/Editor/Data/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll"
--r:"F:/Robot Builder/Robot Builder/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
--r:"F:/Robot Builder/Robot Builder/Library/PackageCache/com.unity.visualscripting@1.7.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"F:/Robot Builder/robobuilder/Robot Builder/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
+-r:"F:/Robot Builder/robobuilder/Robot Builder/Library/PackageCache/com.unity.visualscripting@1.7.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Rider.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.TextMeshPro.Editor.ref.dll"
@@ -355,6 +355,7 @@
 "Assets/Scripts/StatsScripts/StatDisplay.cs"
 "Assets/Scripts/StatsScripts/StatModifier.cs"
 "Assets/Scripts/StatsScripts/StatsPanel.cs"
+"Assets/Scripts/Workshop/PartAdder.cs"
 -langversion:9.0
 
 /deterministic

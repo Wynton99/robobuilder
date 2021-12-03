@@ -5,6 +5,9 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
 
+    public int moveMethod; //0 = default, 1 = on click
+    bool canOrbit; //if the camera can orbit at a given moment
+
     public Transform target;
     public float Distance = 10.0f; //distance of the camera from the player
     public float XSpeed = 60.0f; //speed of rotation about the x axis
@@ -37,12 +40,27 @@ public class CameraController : MonoBehaviour
         {
             FixedRotation.freezeRotation = true;
         }
+
+        if (moveMethod == 0)
+        {
+            canOrbit = true;
+        } else
+        {
+            canOrbit = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            canOrbit = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            canOrbit = false;
+        }
     }
 
     void OnTriggerEnter(Collider collider)
@@ -63,8 +81,11 @@ public class CameraController : MonoBehaviour
         //casts a ray to get the distance and calculate rotation and position for the camera
         if (target)
         {
-            x += Input.GetAxis("Mouse X") * XSpeed * 0.02f;
-            y -= Input.GetAxis("Mouse Y") * YSpeed * 0.02f;
+            if (moveMethod == 0 || (moveMethod == 1 && canOrbit))
+            {
+                x += Input.GetAxis("Mouse X") * XSpeed * 0.02f;
+                y -= Input.GetAxis("Mouse Y") * YSpeed * 0.02f;
+            }
 
             y = ClampAngle(y, YMinLimit, YMaxLimit);
 

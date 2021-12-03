@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class OpenWorldManager : MonoBehaviour
 {
-    //controls
-    public static KeyCode invUI = KeyCode.E;
 
     // Start is called before the first frame update
     void Start()

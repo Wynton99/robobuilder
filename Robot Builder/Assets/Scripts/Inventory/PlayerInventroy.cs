@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerInventroy : MonoBehaviour
 {
@@ -19,14 +20,12 @@ public class PlayerInventroy : MonoBehaviour
     public GameObject MainManager; //the MainManager Object
     private MainManager MainManagerScript; //the MainManager Script attached to the MainManager Object
     public GameObject OpenWorldManager; //the Open World Manager Object
-    private OpenWorldManager OpenWorldManagerScript; //the OpenWorldManager script attached to the Open Wold Manager Object
 
     // Start is called before the first frame update
     void Start()
     {
         //initialize the managers
         MainManagerScript = MainManager.GetComponent<MainManager>(); //make an instance of the MainManager script
-        OpenWorldManagerScript = OpenWorldManager.GetComponent<OpenWorldManager>(); //make an instance of the OpenWorldManager script
 
         //initialize the canvases to start off
         InventoryUICanvas.enabled = false; //the inventory UI is enabled by default and must be turned off first
@@ -39,7 +38,7 @@ public class PlayerInventroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !InventoryUICanvas.isActiveAndEnabled) //if 'E' is pressed and another UI is disabled
+        if (Input.GetKeyDown(KeyCode.E) && !InventoryUICanvas.isActiveAndEnabled || SceneManager.GetActiveScene().name.Equals("Workshop"))  //if 'E' is pressed and another UI is disabled
         {
             InventoryUICanvas.enabled = !InventoryUICanvas.enabled; //toggle the canvas
             InventoryContainer.SetActive(true); //activate the inventory container

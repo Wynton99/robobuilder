@@ -22,7 +22,7 @@ public class BuildingSelector : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                print(hit.collider.name);
+                //print(hit.collider.name);
 
                 //look at build settings to see which index each scene has
                 if (hit.collider.name.Equals("Arena"))
