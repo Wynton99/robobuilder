@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Open World.unity
+    guid: acc45bb932cf8034b9a1beef8e0bc9f8
+  - enabled: 1
+    path: Assets/Scenes/Arena.unity
+    guid: c3f74653668927b4c803b379a6248893
+  - enabled: 1
+    path: Assets/Scenes/Scrap Yard.unity
+    guid: 368c48ebdf48e6041bb75781add3dd74
+  - enabled: 1
+    path: Assets/Scenes/Store.unity
+    guid: e196e44077b255245b3084663a185b74
+  - enabled: 1
+    path: Assets/Scenes/Workshop.unity
+    guid: dd60cf9aa38126648b93ac1194ee2015
+  m_configObjects: {}
