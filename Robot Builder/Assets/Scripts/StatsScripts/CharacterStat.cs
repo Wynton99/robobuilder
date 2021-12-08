@@ -4,6 +4,11 @@ using System.Collections.ObjectModel;
 
 namespace Ash.RobotStats
 {
+
+    /*  WE NEED COMMENTS! 
+     *  GIVE ME COMMENTS!
+     *  COMMENTS COMMENTS COMMENTS!!!
+     */
 	[Serializable]
 	public class CharacterStat
 	{

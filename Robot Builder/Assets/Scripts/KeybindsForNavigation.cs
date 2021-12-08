@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class OpenWorldManager : MonoBehaviour
+
+public class KeybindsForNavigation : MonoBehaviour
 {
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +15,9 @@ public class OpenWorldManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        /*this adds a basic fucntion that allows for the game to know*/
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+             SceneManager.LoadScene(sceneBuildIndex: 0);
         }
     }
 }
